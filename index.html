@@ -33,7 +33,7 @@
           <div class="row">
             <div class="col-md text-center">
                 <h4 class="mt-3">TOTAL PRICE</h4>
-                <h4 class="text-danger font-weight-bold" style="font-size: 2rem;">$<span id="cost">0</span></h4>
+                <h4 class="text-danger font-weight-bold" style="font-size: 2rem;">	£<span id="cost">0</span></h4>
                </div>
                <div class="col-md">
                 <div class="font-weight-bold text-center mt-3 mb-3 p-2" style="background-color: #d3d3d3; font-size: large;">
@@ -63,11 +63,14 @@
                 var Length = $("#L").val();
                 var Width = $("#W").val();
                 var sm = Length*Width;
+                var sm = sm.toFixed(2);
                  $("#sqm").text(sm);
                  var nobcal = sm*2.4;
+                 var nobcal =  nobcal.toFixed(2);
 
-                var NOB = $("#NB").text(nobcal);
+                $("#NB").text(nobcal);
                 var cost = nobcal*14;
+                var cost = cost.toFixed(2);
                 $("#cost").text(cost);
             }
         });
